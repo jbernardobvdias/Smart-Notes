@@ -6,7 +6,11 @@ This will put all the notes into a vector space so that the model can quickly re
 
 ## How to run:
 
-This application is built using django, and it's separated into two parts, the frontend and the backend. This means that you need to run two django applications at the same time in order for the system to work.
+In order to run this tool make sure you have the right python environment selected, then run the following command:
+
+```sh
+$ bash run.sh
+```
 
 ## To-do:
 
