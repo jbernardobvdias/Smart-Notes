@@ -6,10 +6,19 @@ This will put all the notes into a vector space so that the model can quickly re
 
 ## How to run:
 
-In order to run this tool make sure you have the right python environment selected, then run the following command:
+In order to run this tool there are a few steps you need to do:
+
+1. Install dependencies:
 
 ```sh
-$ bash run.sh
+$ python -m pip install --upgrade pip
+$ pip install -r requirements.txt
+```
+
+2. Run the django front project:
+
+```sh
+$ python manage.py runserver
 ```
 
 ## To-do:

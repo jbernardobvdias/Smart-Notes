@@ -1,5 +1,14 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
-def api_home(request):
-    return JsonResponse({"message": "Hello from the backend!"})
+def api_test(request):
+    return JsonResponse({"message": "Backend is working"})
+
+def api_save_note(request):
+    return JsonResponse({"message": "Backend is working"})
+
+def api_delete_note(request):
+    return JsonResponse({"message": "Backend is working"})
+
+def api_save_settings(request):
+    return JsonResponse({"message": "Backend is working"})

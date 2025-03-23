@@ -1,10 +1,10 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'templates/index.html')
+    return render(request, 'index.html')
 
 def chat(request):
-    return render(request, 'templates/chat.html')
+    return render(request, 'chat.html')
 
 def notes(request):
-    return render(request, 'templates/notes.html')
+    return render(request, 'notes.html')
