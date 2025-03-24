@@ -10,5 +10,5 @@ def api_save_note(request):
 def api_delete_note(request):
     return JsonResponse({"message": "Backend is working"})
 
-def api_save_settings(request):
+def api_ask(request):
     return JsonResponse({"message": "Backend is working"})
