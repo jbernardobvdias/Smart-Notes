@@ -1,11 +1,15 @@
 import os
 import django
-from models import Notes
+from models import Note
 
 def add_note(title, content):
-    note = Notes(title=title, content=content)
+    note = Note(title=title, content=content)
     note.save()
-    print(f'Note "{title}" saved successfully.')
+
+def delete_note(id):
+    note = Note.objects.get(id)
+    note.delete()
 
 def get_notes():
-    print("Test")
+    all_notes = list(Note.objects.all())
+    return all_notes
