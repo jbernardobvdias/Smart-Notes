@@ -1,6 +1,6 @@
 import os
 import django
-from models import Note
+from backend.models import Note
 
 def add_note(title, content):
     note = Note(title=title, content=content)
