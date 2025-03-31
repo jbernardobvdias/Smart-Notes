@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'bootstrap/bootstrap.bundle.min.js' %}"></script>
+    <title>Smart Notes</title>
+</head>
+<body>
+    <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" 
+        id="pillNav2" role="tablist" 
+        style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+        
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active rounded-5" id="notes-tab" data-bs-toggle="tab" data-bs-target="#notes-content" type="button" role="tab">
+                Notes
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-5" id="chat-tab" data-bs-toggle="tab" data-bs-target="#chat-content" type="button" role="tab">
+                Chat
+            </button>
+        </li>
+    </ul>
+
+    <div class="tab-content container mt-4">
+        <div class="tab-pane fade show active" id="notes-content" role="tabpanel">
+            {% include 'widgets/notes.html' %}
+        </div>
+        <div class="tab-pane fade" id="chat-content" role="tabpanel">
+            {% include 'widgets/chat.html' %}
+        </div>
+    </div>
+</body>
+</html>

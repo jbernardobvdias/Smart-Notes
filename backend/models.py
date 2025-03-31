@@ -10,3 +10,10 @@ class Note(models.Model):
 
     def __str__(self):
         return self.text[:50]
+    
+class User(models.Model):
+    username = models.TextField()
+    password = models.TextField()
+
+    def __str__(self):
+        return self.text[:50]
