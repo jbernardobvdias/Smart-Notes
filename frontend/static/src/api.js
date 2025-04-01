@@ -1,4 +1,12 @@
-async function signup(username, password) {
+async function signup() {
+    let username = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if (!username || !password) {
+        alert("Please enter both username and password.");
+        return;
+    }
+
     const response = await fetch('/api/signup/', {
         method: 'POST',
         headers: {
