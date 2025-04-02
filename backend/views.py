@@ -3,16 +3,19 @@ from django.http import JsonResponse
 from backend.data.db import *
 from backend.data.ollama import *
 import json
+from django.views.decorators.csrf import csrf_exempt
 
 def api_test(request):
     return JsonResponse({"message": "Backend is working"})
 
+@csrf_exempt
 def api_signup(request):
     if request.method == "POST":
         data = json.loads(request.body)
-        return sign_up(data['username'], data['password'])
+        return JsonResponse({"result" : sign_up(data['username'], data['password'])}, status=200)
     return JsonResponse({"error": "Invalid request"}, status=400)
 
+@csrf_exempt
 def api_login(request):
     if request.method == "POST":
         data = json.loads(request.body)
