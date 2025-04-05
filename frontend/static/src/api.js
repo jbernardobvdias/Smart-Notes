@@ -45,7 +45,7 @@ async function saveNote(title, content) {
 async function getNotes() {
     const response = await fetch('/api/get-notes/');
     const data = await response.json();
-    console.log(data);
+    return data
 }
 
 async function deleteNote(noteId) {

@@ -8,13 +8,3 @@ class Note(models.Model):
     content = models.TextField()
     embedding = models.BinaryField(null=True, blank=True) # Embeddings as binary data
     created_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.text[:50]
-    
-class User(models.Model):
-    username = models.TextField()
-    password = models.TextField()
-
-    def __str__(self):
-        return self.text[:50]
